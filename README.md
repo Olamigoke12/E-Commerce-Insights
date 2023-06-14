@@ -210,6 +210,42 @@ _Note: High revenue on the weekends_
 - Attention is to be paid to the regular air operators to ensure faster delivery. 
 
 
+## Dax Synthax 
+
+loss =    CALCULATE(SUM(Table_Sales_Transactions[Profit]),Table_Sales_Transactions[Order_Status]="Returned")
+
+Delivered = CALCULATE([Total_Order_status],Table_Sales_Transactions[Order_Status]="Delivered")
+
+Total Profit = [Revenue]-[loss]
+
+%Delivered = DIVIDE([Delivered],[Total_Order_status],0)
+
+%Returned = DIVIDE([Returned],[Total_Order_status],0)
+
+Average day to ship = AVERAGE(Table_Sales_Transactions[Days_to_Ship])
+
+Avg shipping cost = AVERAGE(Table_Sales_Transactions[Shipping Cost])
+
+Delivered = CALCULATE([Total_Order_status],Table_Sales_Transactions[Order_Status]="Delivered")
+
+Max Day to ship = MAX(Table_Sales_Transactions[Days_to_Ship])
+
+Median Day to ship = CALCULATE(MEDIAN(Table_Sales_Transactions[Days_to_Ship]))
+
+Min day to ship = CALCULATE(MIN(Table_Sales_Transactions[Days_to_Ship]))
+
+Returned = CALCULATE([Total_Order_status],Table_Sales_Transactions[Order_Status]="Returned")
+
+Revenue = SUM(Table_Sales_Transactions[Profit])
+
+Total Order quantity = SUM(Table_Sales_Transactions[Real_Order_Quantity])
+
+Total Shipping cost = SUM(Table_Sales_Transactions[Shipping Cost])
+
+Total_Order_status = COUNTROWS(Table_Sales_Transactions)
+
+
+
 ![thankyou](https://github.com/Olamigoke12/E-Commerce-Insights/assets/135283137/2fb1cdc4-3a82-45d5-b5d6-0c67ff431d00)
 
 
